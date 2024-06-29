@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nest-docker-postgres
+    ports:
+      - '5000:5000'
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+    network_mode: host
