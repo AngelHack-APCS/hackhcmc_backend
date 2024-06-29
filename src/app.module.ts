@@ -6,10 +6,14 @@ import { PrismaModule } from './prisma/prisma.module';
 import { ShopModule } from './shop/shop.module';
 import { TaskModule } from './task/task.module';
 import { ParentModule} from './parent/module';
+import { ParentWalletController } from './parent-wallet/parent-wallet.controller';
+import { ParentWalletService } from './parent-wallet/parent-wallet.service';
+import { ParentWalletModule } from './parent-wallet/parent-wallet.module';
+import { WalletModule } from './wallet/wallet.module';
 
 @Module({
-    imports: [AuthModule, PrismaModule, ShopModule, AuthModule, TaskModule, ParentModule],
-    controllers: [AppController],
-    providers: [AppService],
+    imports: [AuthModule, PrismaModule, ShopModule, AuthModule, TaskModule, ParentModule, ParentWalletModule, WalletModule],
+    controllers: [AppController, ParentWalletController],
+    providers: [AppService, ParentWalletService],
 })
 export class AppModule {}
