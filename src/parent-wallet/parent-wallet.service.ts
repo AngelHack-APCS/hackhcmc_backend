@@ -66,7 +66,7 @@ export class ParentWalletService {
         const formattedTransactions = transactions.map(transaction => ({
             transaction_id: transaction.transaction_id,
             image_url: transaction.type === 'order' ? itemImageMap[transaction.item_id] || null : null,
-            date: transaction.transaction_date,
+            date: transaction.transaction_date.toLocaleDateString('en-GB'),
             amount: transaction.amount,
             direction: transaction.direction,
             type: transaction.type,
