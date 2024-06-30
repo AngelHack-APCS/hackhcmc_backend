@@ -1,5 +1,18 @@
+# Bara - hackhcmc 2024 - Backend
+
+## Link to components
+
+### Frontend
+You can access our backend server [here](https://github.com/AngelHack-APCS/hackhcmc_frontend)
+
+### Database
+You can access our database server [here](https://github.com/AngelHack-APCS/hackhcmc_db)
+
+### AI
+You can access our AI service [here](https://github.com/AngelHack-APCS/hackhcmc_ai)
+
 ## Presequities 
-Before running the application, ensure that you have set up the database. Follow the instructions provided [here](https://github.com/AngelHackAPCS/DB) to install and configure the database.
+Before running the application, ensure that you have set up the database. Follow the instructions provided [here](https://github.com/AngelHack-APCS/hackhcmc_db) to install and configure the database.
 
 ## How to run with npm
 
