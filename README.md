@@ -1,9 +1,13 @@
 # Bara - hackhcmc 2024 - Backend
 
+## Introduction 
+
+This repository contains the backend code for our hackhcmc 2024 project.
+
 ## Link to components
 
 ### Frontend
-You can access our backend server [here](https://github.com/AngelHack-APCS/hackhcmc_frontend)
+You can access our frontend server [here](https://github.com/AngelHack-APCS/hackhcmc_frontend)
 
 ### Database
 You can access our database server [here](https://github.com/AngelHack-APCS/hackhcmc_db)
@@ -65,6 +69,13 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+## Contributors:
+
+- [qvanle](https://github.com/qvanle)
+- [BachNgoH](https://github.com/BachNgoH)
+- [DiriiMQ](https://github.com/DiriiMQ)
+- [dphu2609](https://github.com/dphu2609)
 
 ## License
 
