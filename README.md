@@ -1,4 +1,4 @@
-# Bara - hackhcmc 2024 - Backend
+AngelHack Hackhcmc - Team AIO_APCS1 Backend Repo
 
 ## Introduction 
 
