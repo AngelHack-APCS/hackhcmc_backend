@@ -62,7 +62,7 @@ export class AuthController {
     }
 
     @Post('createLoginCode')
-    @UseGuards(AuthenticatedParentGuard)
+    // @UseGuards(AuthenticatedParentGuard)
     createLoginCode(@Body() data: ChildAuthDto, @Req() req: Request) {
         return this.authService.createLoginCode(data, req);
     }

@@ -196,24 +196,18 @@ export class AuthService {
     }
 
     async createLoginCode(data: ChildAuthDto, req: Request) {
-        try {
-            const updatedChild = await this.prisma.children.update({
-                where: {
-                    child_id: data.child_id,
-                },
-                data: {
-                    login_code: this.hashPassword(data.login_code),
-                },
-            });
+        const parent_id = parseInt(req.cookies['parent_id']);
 
-            // Create a new object without the 'password' field
-            const { login_code: _, ...updatedChildWithoutPassword } =
-                updatedChild;
+        const child = await this.prisma.children.update({
+            where: {
+                child_id: data.child_id,
+            },
+            data: {
+                login_code: this.hashPassword(data.login_code),
+            },
+        });
 
-            return updatedChildWithoutPassword;
-        } catch (error) {
-            throw error; // Propagate the error to be handled by NestJS error handling
-        }
+        return child;
     }
 
     async updateChildInfo(data: ChildAuthDto, req: Request) {
