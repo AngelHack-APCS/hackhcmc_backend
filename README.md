@@ -1,18 +1,6 @@
 ## Presequities 
 Before running the application, ensure that you have set up the database. Follow the instructions provided [here](https://github.com/AngelHackAPCS/DB) to install and configure the database.
 
-## How to run with Docker
-### How to run
-First, create the `.env` to config the `DATABASE_URL`
-
-```text
-DATABASE_URL="postgresql://postgres:mysecretpassword@localhost:5432/mydatabase"
-```
-Then, run in terminal
-```bash
-$ docker compose up --build
-```
-
 ## How to run with npm
 
 ### Installation
