@@ -10,9 +10,10 @@ import { ParentWalletController } from './parent-wallet/parent-wallet.controller
 import { ParentWalletService } from './parent-wallet/parent-wallet.service';
 import { ParentWalletModule } from './parent-wallet/parent-wallet.module';
 import { WalletModule } from './wallet/wallet.module';
+import { ChildrenModule } from './children/children.module';
 
 @Module({
-    imports: [AuthModule, PrismaModule, ShopModule, AuthModule, TaskModule, ParentModule, ParentWalletModule, WalletModule],
+    imports: [AuthModule, PrismaModule, ShopModule, AuthModule, TaskModule, ParentModule, ParentWalletModule, WalletModule, ChildrenModule],
     controllers: [AppController, ParentWalletController],
     providers: [AppService, ParentWalletService],
 })

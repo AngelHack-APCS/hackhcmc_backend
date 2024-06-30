@@ -1,6 +1,7 @@
 import { Controller, Get, Query, Res, Post, Body, Req } from '@nestjs/common';
 import { ParentService } from './service'; // Adjust the path based on your project structure
-import { Response } from 'express';
+import { Response, Request } from 'express';
+import { TaskDto } from './task.dto';
 
 @Controller('parent')
 export class ParentController {
@@ -44,6 +45,26 @@ export class ParentController {
         }
 
         res.json(children);
+    }
+
+    @Post('addTask')
+    async addTask(
+        @Body() body: TaskDto,
+        @Req() req: Request,
+        @Res() res: Response,
+    ): Promise<void> {
+        var task = await this.ParentService.addTask(body, req);
+        res.json(task);
+    }
+
+    @Post('approveTask')
+    async approveTask(
+        @Body() body: TaskDto,
+        @Req() req: Request,
+        @Res() res: Response,
+    ): Promise<void> {
+        var task = await this.ParentService.approveTask(body, req);
+        res.json(task);
     }
 }
 
